@@ -17,3 +17,7 @@
 /* Yan yana iki apartmandan oluşan site amblemi. */
 .brand-icon{display:block;flex-shrink:0}.brand-icon svg{display:block;width:100%;height:100%}.footer-logo{color:#c0caa7;width:46px;height:52px}
 @media(max-width:760px){.footer-logo{width:36px;height:42px}}
+
+.management-location{margin-top:28px;padding-top:20px;border-top:1px solid #d1d5c7}.management-location h3{font-size:13px;font-weight:500}.management-location p{font-size:12px;color:var(--muted);margin-top:8px}
+@media(min-width:761px){.living-grid{grid-template-columns:repeat(3,1fr)}.living-grid article:nth-child(4){border-left:0;padding-left:0}.living-grid article:nth-child(n+4){border-top:1px solid var(--line)}}
+@media(max-width:760px){.living-grid article:nth-child(odd){border-left:0;padding-left:0}}
