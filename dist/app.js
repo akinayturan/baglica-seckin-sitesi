@@ -7,7 +7,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('resize',()=>{if(window.innerWidth>760)closeMenu();});
 const info=document.querySelector('#info-dialog');
 function showInfo(title,body){document.querySelector('#dialog-title').textContent=title;document.querySelector('#dialog-body').textContent=body;info.showModal();}
-document.querySelector('#management-button').addEventListener('click',()=>showInfo('Yönetim iletişimi','Site yönetimine ait doğrulanmış telefon, e-posta ve çalışma saatleri henüz eklenmedi. İletişim bilgileri paylaşıldığında bu bölüm güncellenecektir.'));
+document.querySelector('#management-button').addEventListener('click',()=>showInfo('Yönetim iletişimi','Site yönetim birimi, A Blok’un en alt katında yer alıyor. Telefon, e-posta ve çalışma saatleri henüz eklenmedi.'));
 document.querySelector('#image-info').addEventListener('click',()=>showInfo('Görseller hakkında','Bu sayfada Bağlıca Seçkin Sitesi’ne ait, kullanıcı tarafından paylaşılan görüntüler kullanılmıştır. Sokak görüntüleri Google kaynaklıdır; görüntülerdeki kaynak işaretleri korunmuştur. Çekim tarihlerinden bu yana site görünümünde değişiklikler olabilir. Blok ve kapalı otopark girişi fotoğrafı da kullanıcı tarafından paylaşılmıştır.'));
 document.querySelectorAll('dialog').forEach(d=>{d.querySelector('.dialog-close').addEventListener('click',()=>d.close());d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});});
 document.querySelector('.dialog-ok').addEventListener('click',()=>info.close());

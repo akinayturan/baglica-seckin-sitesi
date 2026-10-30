@@ -30,7 +30,7 @@ Geçici `pages-release` dalı daha önce kalmışsa önce kontrol edin. GitHub P
 
 ## İçerik
 
-Kullanıcının sağladığı bilgiler: iki blok, geniş arazi, basketbol sahası ve her iki blokta kapalı otopark. Bahçe ve yürüyüş yolları paylaşılan görüntülerde görülüyor. Adres: Bağlıca, Çambayırı Cd. No:134, 06790 Etimesgut/Ankara.
+Kullanıcının sağladığı bilgiler: iki blok, geniş arazi, basketbol sahası, çocuk oyun alanı ve her iki blokta kapalı otopark. Site yönetim birimi A Blok’un en alt katındadır. Bahçe ve yürüyüş yolları paylaşılan görüntülerde görülüyor. Adres: Bağlıca, Çambayırı Cd. No:134, 06790 Etimesgut/Ankara.
 
 Yönetim telefonu/e-postası, çalışma saatleri, daire sayısı ve gerçek duyurular sağlanmadığından eklenmedi. Yönetim paneli, sakin girişi ve form gönderimi yoktur. Galeri, klavye ile fotoğraf geçişi, mobil menü, adres kopyalama ve yol tarifi çalışır.
 
