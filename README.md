@@ -1,35 +1,51 @@
 # Bağlıca Seçkin Sitesi
 
-Mobil uyumlu, Türkçe, bağımlılıksız HTML/CSS/JavaScript web sitesi. Dosyalar `dist/` içindedir ve herhangi bir statik sunucuda çalışır.
+Türkçe, mobil uyumlu ve bağımlılıksız HTML/CSS/JavaScript web sitesi.
 
-## Yerelde çalıştırma
+- Site: https://akinayturan.github.io/baglica-seckin-sitesi/
+- Kaynak kod: https://github.com/akinayturan/baglica-seckin-sitesi
+- Yayın dosyaları: `dist/`
+- GitHub Pages: `gh-pages` dalının kökünden yayınlanır.
+
+## Yerel önizleme
 
 ```sh
-cd seckin-web
-python3 -m http.server 3000 --directory dist
+python3 -m http.server 3000 --bind 127.0.0.1 --directory dist
 ```
 
-Ardından http://localhost:3000 adresini açın.
+http://127.0.0.1:3000 adresini açın.
 
-## İçerik durumu
+## Yayınlama
 
-- Adres kullanıcı tarafından sağlandı. Harita aynı adres sorgusuna açılır; işaret konumu yayın öncesinde yerinde teyit edilmelidir.
-- Mimari ve doğa fotoğrafları Unsplash kaynaklı temsili görsellerdir; sitede bu açıkça belirtilir. Gerçek fotoğraflarla değiştirilmelidir.
-- Yönetim telefonu/e-postası, çalışma saatleri, tesis özellikleri, sayısal bilgiler ve gerçek duyurular sağlanmadığından eklenmedi.
-- Duyuru alanı gerçek bir boş durum gösterir. Yönetim paneli, sakin girişi ve form gönderimi bulunmaz.
-- Galeri büyütme, klavyeyle fotoğraf değiştirme, mobil menü, adres kopyalama ve yol tarifi bağlantıları çalışır.
-- Google Fonts ve Google Haritalar dış servislerdir; diğer içerik ve görseller yereldir.
-- Taslak için arama motoru indekslemesi kapalıdır (`noindex,nofollow`). Gerçek içerikler tamamlandığında kaldırılabilir.
+Kaynak değişikliklerini `main` dalına kaydedip gönderin. Ardından `dist/` içeriğinden yayın dalını üretin:
+
+```sh
+git push origin main
+git subtree split --prefix=dist -b pages-release
+git push origin pages-release:gh-pages
+git branch -D pages-release
+```
+
+Geçici `pages-release` dalı daha önce kalmışsa önce kontrol edin. GitHub Pages, `gh-pages` güncellendiğinde otomatik yayınlar; derleme veya GitHub Actions iş akışı gerekmez. Varlık yolları göreli olduğundan proje adresi altında çalışır. `.openai/hosting.json` önceki özel Sites yayınının kaydıdır; GitHub Pages tarafından kullanılmaz.
+
+## İçerik
+
+Kullanıcının sağladığı bilgiler: iki blok, geniş arazi, basketbol sahası ve her iki blokta kapalı otopark. Bahçe ve yürüyüş yolları paylaşılan görüntülerde görülüyor. Adres: Bağlıca, Çambayırı Cd. No:134, 06790 Etimesgut/Ankara.
+
+Yönetim telefonu/e-postası, çalışma saatleri, daire sayısı ve gerçek duyurular sağlanmadığından eklenmedi. Yönetim paneli, sakin girişi ve form gönderimi yoktur. Galeri, klavye ile fotoğraf geçişi, mobil menü, adres kopyalama ve yol tarifi çalışır.
 
 ## Görseller
 
-- Mimari: https://images.unsplash.com/photo-1460317442991-0ec209397118 (indirme kimliği: photo-1460317442991-0ec209397118)
-- Doğa: https://images.unsplash.com/photo-1441974231531-c6227db76b6e
-- Unsplash lisansı: https://unsplash.com/license
+Stok fotoğraflar kaldırıldı. Kullanıcının proje köküne eklediği görüntüler, kırpılmadan ve kaynak işaretleri korunarak web için sıkıştırıldı:
 
-## İncelenen referanslar
+| Dosya | Kaynak |
+| --- | --- |
+| `iki-blok.webp` | Screenshot 2026-10-30 at 13.03.11.png |
+| `site-girisi.webp` | Screenshot 2026-10-30 at 12.58.15.png |
+| `basketbol-sahasi.webp` | Screenshot 2026-10-30 at 13.02.29.png |
+| `bahce.webp` | Screenshot 2026-10-30 at 13.01.33.png |
+| `blok-ve-otopark-girisi.webp` | 95ad8169d6d64fa58aefe8b48a877931.webp |
 
-- https://www.florabaglica.com/ — incelendi; görselleri ve marka öğeleri kopyalanmadı.
-- https://www.parkbulvarsitesi.com/ — araştırma sırasında erişim zaman aşımına uğradı.
+Sokak görüntüleri Google kaynaklıdır. Kaynak işaretleri görsellerde ve açıklamalarda korunmuştur. Görüntü tarihlerinden bu yana site görünümü değişmiş olabilir. Kapalı otopark içi fotoğrafı henüz bulunmuyor.
 
-Yayın ayarları `.openai/hosting.json` içindedir. Sites kaydı başlangıçta özeldir.
+Google Fonts ve Google Haritalar dış servislerdir. Diğer içerik ve görseller yereldir. Arama motoru indekslemesi açık, canonical ve sosyal paylaşım bilgileri GitHub Pages adresine ayarlıdır.
