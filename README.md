@@ -61,3 +61,14 @@ Kaynak sayfadaki sekiz mevzuat başlığı özgün kısa özetlere dönüştür�
 - Toplu yapı ve vekâlet değişiklikleri: https://cdn.tbmm.gov.tr/KKBSPublicFile/D23/Y2/T1/KanunMetni/97c75496-a5a3-4aef-9a21-db212b3db65a.html
 
 Duyurular sitede otomatik eşitlenmez. Güncel kişisel duyurular ve hesap özellikleri yönetimin Konsiyon tanımlarına bağlıdır.
+
+## Yönetim galerisinden fotoğraflar
+
+Kaynak: https://baglicaseckinsitesi.com.tr/#gallery. Kullanıcının isteğiyle dört farklı fotoğraf indirildi, WebP formatında sıkıştırıldı ve galerinin başına eklendi. Önceki dört görüntü korunur; toplam sekiz fotoğraf aynı büyütme penceresinde gezilebilir. Dikey fotoğraflar kartlarda tam oranıyla gösterilir.
+
+| Yerel dosya | Kaynak dosya |
+| --- | --- |
+| `yonetim-bahce.webp` | `uploads/galeri/77595949172974_galeri.jpg` |
+| `yonetim-dis-cephe.webp` | `uploads/galeri/720875978469848_galeri.jpg` |
+| `yonetim-blok-onu.webp` | `uploads/galeri/174672365188599_galeri.jpg` |
+| `yonetim-site-tabelasi.webp` | `uploads/galeri/857548952102661_galeri.jpg` |
