@@ -2,10 +2,12 @@
 
 Türkçe, mobil uyumlu ve bağımlılıksız HTML/CSS/JavaScript web sitesi.
 
-- Site: https://akinayturan.github.io/baglica-seckin-sitesi/
+- Site: https://baglicaseckinsitesi.pages.dev/
 - Kaynak kod: https://github.com/akinayturan/baglica-seckin-sitesi
 - Yayın dosyaları: `dist/`
-- GitHub Pages: `gh-pages` dalının kökünden yayınlanır.
+- Cloudflare Pages projesi: `baglicaseckinsitesi` (Webhuus hesabı).
+- Yayın yöntemi: Direct Upload; yalnızca `dist/` içeriği yüklenir.
+- Eski GitHub Pages adresi geçiş sonrası yeni siteye yönlendirilir.
 
 ## Yerel önizleme
 
@@ -17,16 +19,17 @@ http://127.0.0.1:3000 adresini açın.
 
 ## Yayınlama
 
-Kaynak değişikliklerini `main` dalına kaydedip gönderin. Ardından `dist/` içeriğinden yayın dalını üretin:
+Cloudflare panelinde **Workers & Pages → baglicaseckinsitesi → Create a new deployment → Production** yoluyla `dist/` içeriğini veya bu içerikten hazırlanmış ZIP dosyasını yükleyin. ZIP içinde `index.html` doğrudan kökte olmalıdır.
+
+Wrangler oturumu açılmış bir bilgisayardan alternatif yayın komutu:
 
 ```sh
-git push origin main
-git subtree split --prefix=dist -b pages-release
-git push origin pages-release:gh-pages
-git branch -D pages-release
+bunx wrangler@4.168.0 pages deploy dist --project-name baglicaseckinsitesi --branch main
 ```
 
-Geçici `pages-release` dalı daha önce kalmışsa önce kontrol edin. GitHub Pages, `gh-pages` güncellendiğinde otomatik yayınlar; derleme veya GitHub Actions iş akışı gerekmez. Varlık yolları göreli olduğundan proje adresi altında çalışır. `.openai/hosting.json` önceki özel Sites yayınının kaydıdır; GitHub Pages tarafından kullanılmaz.
+`wrangler.jsonc` hesap ve proje ayarlarını içerir; kimlik bilgisi içermez. Doğrudan yükleme projesidir; GitHub’a kaynak kodu göndermek Cloudflare’da otomatik yayın başlatmaz.
+
+Kaynak kodu GitHub’daki `main` dalında tutulur. `gh-pages` dalı eski adres için yönlendirme görevi görür. Önce Cloudflare yayını doğrulanır, ardından eski adres yeni siteye yönlendirilir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır; Cloudflare Pages tarafından kullanılmaz.
 
 ## İçerik
 
@@ -48,7 +51,7 @@ Stok fotoğraflar kaldırıldı. Kullanıcının proje köküne eklediği görü
 
 Sokak görüntüleri Google kaynaklıdır. Kaynak işaretleri görsellerde ve açıklamalarda korunmuştur. Görüntü tarihlerinden bu yana site görünümü değişmiş olabilir. Kapalı otopark içi fotoğrafı henüz bulunmuyor.
 
-Google Fonts ve Google Haritalar dış servislerdir. Diğer içerik ve görseller yereldir. Arama motoru indekslemesi açık, canonical ve sosyal paylaşım bilgileri GitHub Pages adresine ayarlıdır.
+Google Fonts ve Google Haritalar dış servislerdir. Diğer içerik ve görseller yereldir. Arama motoru indekslemesi açık, canonical, site haritası ve sosyal paylaşım bilgileri Cloudflare Pages adresine ayarlıdır.
 
 ## Sakin işlemleri ve mevzuat (23 Kasım 2026)
 
@@ -72,3 +75,7 @@ Kaynak: https://baglicaseckinsitesi.com.tr/#gallery. Kullanıcının isteğiyle 
 | `yonetim-dis-cephe.webp` | `uploads/galeri/720875978469848_galeri.jpg` |
 | `yonetim-blok-onu.webp` | `uploads/galeri/174672365188599_galeri.jpg` |
 | `yonetim-site-tabelasi.webp` | `uploads/galeri/857548952102661_galeri.jpg` |
+
+## Cloudflare geçişi — 25 Kasım 2026
+
+`baglicaseckinsitesi.pages.dev` Webhuus hesabında Direct Upload projesi olarak yayınlandı. Sayfa, stil, JavaScript, örnek görseller, robots.txt ve sitemap.xml için HTTP 200 ve yerel dosya eşleşmesi doğrulandı. `legacy-redirect/index.html` eski GitHub Pages adresinde kullanılan yönlendirme sayfasıdır; JavaScript etkinse bağlantının sorgu ve bölüm bilgisini korur. Kaynak kodu GitHub’da tutulmaya devam eder.
