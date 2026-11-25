@@ -7,7 +7,7 @@ Türkçe, mobil uyumlu ve bağımlılıksız HTML/CSS/JavaScript web sitesi.
 - Yayın dosyaları: `dist/`
 - Cloudflare Pages projesi: `baglicaseckinsitesi` (Webhuus hesabı).
 - Yayın yöntemi: Direct Upload; yalnızca `dist/` içeriği yüklenir.
-- Eski GitHub Pages adresi geçiş sonrası yeni siteye yönlendirilir.
+- Kullanılacak adres Cloudflare Pages adresidir. Önceki GitHub Pages yayını değiştirilmedi; yeni adrese yönlendirme kurulmadı.
 
 ## Yerel önizleme
 
@@ -29,7 +29,7 @@ bunx wrangler@4.168.0 pages deploy dist --project-name baglicaseckinsitesi --bra
 
 `wrangler.jsonc` hesap ve proje ayarlarını içerir; kimlik bilgisi içermez. Doğrudan yükleme projesidir; GitHub’a kaynak kodu göndermek Cloudflare’da otomatik yayın başlatmaz.
 
-Kaynak kodu GitHub’daki `main` dalında tutulur. `gh-pages` dalı eski adres için yönlendirme görevi görür. Önce Cloudflare yayını doğrulanır, ardından eski adres yeni siteye yönlendirilir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır; Cloudflare Pages tarafından kullanılmaz.
+Kaynak kodu GitHub’daki `main` dalında tutulur. Önceki `gh-pages` dalı geçmiş yayın kaydı olarak korunur. Eski GitHub Pages yayını halen açıktır; birincil yayın Cloudflare Pages üzerindedir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır; Cloudflare Pages tarafından kullanılmaz.
 
 ## İçerik
 
@@ -78,4 +78,4 @@ Kaynak: https://baglicaseckinsitesi.com.tr/#gallery. Kullanıcının isteğiyle 
 
 ## Cloudflare geçişi — 25 Kasım 2026
 
-`baglicaseckinsitesi.pages.dev` Webhuus hesabında Direct Upload projesi olarak yayınlandı. Sayfa, stil, JavaScript, örnek görseller, robots.txt ve sitemap.xml için HTTP 200 ve yerel dosya eşleşmesi doğrulandı. `legacy-redirect/index.html` eski GitHub Pages adresinde kullanılan yönlendirme sayfasıdır; JavaScript etkinse bağlantının sorgu ve bölüm bilgisini korur. Kaynak kodu GitHub’da tutulmaya devam eder.
+`baglicaseckinsitesi.pages.dev` Webhuus hesabında Direct Upload projesi olarak yayınlandı. Sayfa, stil, JavaScript, örnek görseller, robots.txt ve sitemap.xml için HTTP 200 ve yerel dosya eşleşmesi doğrulandı. Kullanıcı eski adresin henüz duyurulmadığını belirttiği için yönlendirme kurulmadı. GitHub Pages yayını değiştirilmedi; kaynak kodu GitHub’da tutulmaya devam eder.
