@@ -6,8 +6,8 @@ Türkçe, mobil uyumlu ve bağımlılıksız HTML/CSS/JavaScript web sitesi.
 - Kaynak kod: https://github.com/akinayturan/baglica-seckin-sitesi
 - Yayın dosyaları: `dist/`
 - Cloudflare Pages projesi: `baglicaseckinsitesi` (Akin Ayturan hesabı).
-- Hedef yayın yöntemi: GitHub bağlantısı; `main` dalından `dist/` klasörü otomatik yayınlanır.
-- Kullanılacak adres Cloudflare Pages adresidir. Önceki GitHub Pages yayını değiştirilmedi; yeni adrese yönlendirme kurulmadı.
+- Yayın yöntemi: GitHub bağlantısı; `main` dalından `dist/` klasörü otomatik yayınlanır.
+- GitHub Pages yayını kapatıldı; kaynak deposu GitHub’da korunur.
 
 ## Yerel önizleme
 
@@ -27,9 +27,9 @@ Cloudflare Pages, **Akin Ayturan** hesabındaki `baglicaseckinsitesi` projesine 
 - Build output directory: `dist`
 - Root directory: deponun kökü
 
-Güncellemeleri `main` dalına kaydedip GitHub’a gönderin; Cloudflare otomatik yayın oluşturur. `wrangler.jsonc` doğru hesap ve yayın klasörü bilgisini içerir, kimlik bilgisi içermez.
+Güncellemeleri `main` dalına kaydedip GitHub’a gönderin; Cloudflare otomatik yayın oluşturur. `wrangler.jsonc` yayın klasörünü tanımlar, kimlik bilgisi içermez. Pages yapılandırması `account_id` desteklemediğinden hesap seçimi Cloudflare panelinde yapılır. Hesap: Akin Ayturan (`0d1c6160111cd8eae268475a3f5625d4`).
 
-Önceki Webhuus Direct Upload projesi bu sitenin doğru barındırma hesabı değildir. Geçişte aynı `pages.dev` adını kullanmak için önce bu yanlış proje kaldırılır. Eski `gh-pages` dalı geçmiş yayın kaydı olarak korunabilir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır ve Cloudflare Pages tarafından kullanılmaz.
+Önceki Webhuus Direct Upload projesi 27 Kasım 2026 tarihinde kaldırıldı; aynı `pages.dev` adresi Akin Ayturan hesabında yeniden kullanıldı. Eski `gh-pages` dalı geçmiş yayın kaydı olarak korunabilir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır ve Cloudflare Pages tarafından kullanılmaz.
 
 ## İçerik
 
@@ -76,6 +76,6 @@ Kaynak: https://baglicaseckinsitesi.com.tr/#gallery. Kullanıcının isteğiyle 
 | `yonetim-blok-onu.webp` | `uploads/galeri/174672365188599_galeri.jpg` |
 | `yonetim-site-tabelasi.webp` | `uploads/galeri/857548952102661_galeri.jpg` |
 
-## Cloudflare geçişi — 25 Kasım 2026
+## Cloudflare geçişi — 27 Kasım 2026
 
-`baglicaseckinsitesi.pages.dev` Webhuus hesabında Direct Upload projesi olarak yayınlandı. Sayfa, stil, JavaScript, örnek görseller, robots.txt ve sitemap.xml için HTTP 200 ve yerel dosya eşleşmesi doğrulandı. Kullanıcı eski adresin henüz duyurulmadığını belirttiği için yönlendirme kurulmadı. GitHub Pages yayını değiştirilmedi; kaynak kodu GitHub’da tutulmaya devam eder.
+25 Kasım’daki Direct Upload yayını yanlışlıkla Webhuus hesabında oluşturulmuştu. Kullanıcı onayıyla bu proje kaldırıldı, Akin Ayturan hesabında aynı adla GitHub bağlantılı Pages projesi oluşturuldu. `main` dalı ve `dist` yayın klasörü kullanılır. Eski GitHub Pages kaynağı `None` yapılarak yayın kapatıldı; `gh-pages` dalı geçmiş kayıt olarak korunur.
