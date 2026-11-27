@@ -5,8 +5,8 @@ Türkçe, mobil uyumlu ve bağımlılıksız HTML/CSS/JavaScript web sitesi.
 - Site: https://baglicaseckinsitesi.pages.dev/
 - Kaynak kod: https://github.com/akinayturan/baglica-seckin-sitesi
 - Yayın dosyaları: `dist/`
-- Cloudflare Pages projesi: `baglicaseckinsitesi` (Webhuus hesabı).
-- Yayın yöntemi: Direct Upload; yalnızca `dist/` içeriği yüklenir.
+- Cloudflare Pages projesi: `baglicaseckinsitesi` (Akin Ayturan hesabı).
+- Hedef yayın yöntemi: GitHub bağlantısı; `main` dalından `dist/` klasörü otomatik yayınlanır.
 - Kullanılacak adres Cloudflare Pages adresidir. Önceki GitHub Pages yayını değiştirilmedi; yeni adrese yönlendirme kurulmadı.
 
 ## Yerel önizleme
@@ -19,17 +19,17 @@ http://127.0.0.1:3000 adresini açın.
 
 ## Yayınlama
 
-Cloudflare panelinde **Workers & Pages → baglicaseckinsitesi → Create a new deployment → Production** yoluyla `dist/` içeriğini veya bu içerikten hazırlanmış ZIP dosyasını yükleyin. ZIP içinde `index.html` doğrudan kökte olmalıdır.
+Cloudflare Pages, **Akin Ayturan** hesabındaki `baglicaseckinsitesi` projesine `akinayturan/baglica-seckin-sitesi` deposunun bağlanmasıyla yönetilir.
 
-Wrangler oturumu açılmış bir bilgisayardan alternatif yayın komutu:
+- Production branch: `main`
+- Framework preset: `None`
+- Build command: boş
+- Build output directory: `dist`
+- Root directory: deponun kökü
 
-```sh
-bunx wrangler@4.168.0 pages deploy dist --project-name baglicaseckinsitesi --branch main
-```
+Güncellemeleri `main` dalına kaydedip GitHub’a gönderin; Cloudflare otomatik yayın oluşturur. `wrangler.jsonc` doğru hesap ve yayın klasörü bilgisini içerir, kimlik bilgisi içermez.
 
-`wrangler.jsonc` hesap ve proje ayarlarını içerir; kimlik bilgisi içermez. Doğrudan yükleme projesidir; GitHub’a kaynak kodu göndermek Cloudflare’da otomatik yayın başlatmaz.
-
-Kaynak kodu GitHub’daki `main` dalında tutulur. Önceki `gh-pages` dalı geçmiş yayın kaydı olarak korunur. Eski GitHub Pages yayını halen açıktır; birincil yayın Cloudflare Pages üzerindedir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır; Cloudflare Pages tarafından kullanılmaz.
+Önceki Webhuus Direct Upload projesi bu sitenin doğru barındırma hesabı değildir. Geçişte aynı `pages.dev` adını kullanmak için önce bu yanlış proje kaldırılır. Eski `gh-pages` dalı geçmiş yayın kaydı olarak korunabilir. `.openai/hosting.json` ilk özel Sites yayınının tarihsel kaydıdır ve Cloudflare Pages tarafından kullanılmaz.
 
 ## İçerik
 
